@@ -4,6 +4,8 @@ import express, { Express, Request, Response } from 'express';
 const app: Express = express();
 const port = 3000;
 
+app.use('/users',require("./routes/users"))
+
 app.get('/', (req: Request, res: Response) => {
   res.send('Express + TypeScript Server');
 });
